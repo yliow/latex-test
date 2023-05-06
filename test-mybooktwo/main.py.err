@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/usr/lib/python2.7/site-packages/latextool_basic.py", line 1003, in __init__
+    if center != None: x, y = center
+TypeError: 'int' object is not iterable

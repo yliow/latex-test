@@ -1,0 +1,239 @@
+\begin{comment}
+  * Read the Washington in detail. You can use
+  the web too. I have ordered lots of crypto
+  books for the Stafford library.
+  
+  * For chapter 1, write several classical
+  ciphers. Introduce main ideas without
+  using number theory. You should mention the
+  concept of key and to break a cipher means
+  finding the key. There are several ciphers
+  I covered and there are more in the book.
+  Talk about "private key" cipher.
+  Include examples.
+
+  * Chapter 2: Basic number theory.
+  Talk about divisibility, gcd, Euclidean
+  algorithm, mod, Fermat, Euler.
+  There are other results in Washington book.
+  
+  * Chapter 3: RSA 
+\end{comment}
+  
+\input{mybookpreamble.tex}
+\makeindex
+\renewcommand\TITLE{My CISS451 Book}
+\renewcommand\AUTHOR{John Doe}
+\renewcommand\SHORTAUTHOR{}
+
+\begin{document}
+\topmatter
+
+\chapter{Introduction}
+
+\section{The first cipher: Caesar cipher}
+
+The following word is indexed: 
+derivative\index{derivative}.
+
+Have you heard of Julius Caesar?
+He invented (or maybe his general? [CHECK])
+one of
+the earliest cipher -- the
+\textbf{Caesar cipher}\index{Caesar cipher}.
+Let me explain:
+
+blah
+
+\newcommand\infsum[2]{\sum_{#1 = #2}^\infty}
+
+The most famous series you must know is the
+geometric series:
+\[
+\infsum{n}{0} x^n = \frac{1}{1 - x}
+\]
+This is wrong:
+\[
+\infsum{k}{2} x^k = \frac{1}{1 - x}
+\]
+
+\begin{thm} (Fermat's Little Theorem)
+Let $p$ be a prime.
+If $\gcd(a, p) = 1$, then
+\[
+a^{p - 1} \equiv 1 \pmod{p}
+\]
+\end{thm}
+
+\proof
+Consider the function
+\[
+f : (\Z/p)^* \rightarrow (\Z/p)^*
+\]
+by
+\[
+f(x) = ax
+\]
+Then ...TODO... $f$ is a bijection.
+Hence $f$ permutes $(\Z/p)^*$.
+We multiply the values of $(\Z/p)^*$ to get
+\[
+\prod_{x \in (\Z/p)^*} x
+\]
+The set $(\Z/p)^*$ permuted by $f$ is
+\[ 
+\{ ax \mid x \in (\Z/p)^*  \}
+\]
+Multiplying the values of this set, we get
+\[
+\prod_{x \in (\Z/p)^*} (ax)
+\]
+... TADA.
+\qed
+
+
+
+\section{Second Section}
+\lipsum[1-4]
+
+\section{Third Section}
+\lipsum[1-5]
+
+\chapter{History from 1300 to 1500}
+
+\section{Fourth Section }
+\lipsum[1-6]
+
+\section{Fifth Section }
+\lipsum[1-7]
+
+\section{Sixth Section }
+\lipsum[1-8]
+
+\chapter{History from 1500 to 1800}
+
+\section{Theorem Environment}
+
+INSIDE PARAGRAPH.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+\begin{thm}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+\[
+x = 42
+\]
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+\begin{align*}
+x &= y \\
+  &= z
+\end{align*}
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+\end{thm}
+\noindent 
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+TOP OF PARAGRAPH.
+\begin{thm}
+\lipsum[10]
+\end{thm}
+\noindent
+\lipsum[1]
+
+BOTTOM OF PARAGRAPH.
+\lipsum[1]
+\begin{thm}
+\lipsum[10]
+\end{thm}
+
+
+\chapter{History from 1800 to 2000}
+
+\section{Verbatim}
+TEST VERBATIM WITHIN PARAGRAPH.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+\begin{Verbatim}[frame=single, numbers=left]
+This is verbatim.
+\end{Verbatim}
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+TEST VERBATIM AT BOTTOM OF PARAGRAPH
+\lipsum[1]
+\begin{Verbatim}[frame=single, numbers=left]
+This is verbatim.
+\end{Verbatim}
+
+\section{Test Enumerate}
+TEST WITHIN PARAGRAPH.
+\lipsum[1]
+\begin{enumerate}
+\item ITEM 1
+\item ITEM 2
+\item ITEM 3
+\item ITEM 4
+\end{enumerate}
+\lipsum[2]
+
+
+TEST AT BOTTOM OF PARAGRAPH.
+\lipsum[1]
+\begin{enumerate}
+\item ITEM 1
+\item ITEM 2
+\item ITEM 3
+\item ITEM 4
+\end{enumerate}
+
+\lipsum[1]
+
+\lipsum[1]
+
+
+\section{A New Section}
+\lipsum[1-2]
+\begin{samepage}
+\begin{longtable}{|c|c|c|} \hline
+a & b & c \\ \hline
+a & b & c \\
+a & b & c \\
+a & b & c \\
+a & b & c \\ \hline
+\end{longtable}
+\end{samepage}
+
+\section{Yet Another New Section}
+\lipsum[3-4]
+
+\section{And Yet Another New Section}
+\lipsum[3-4]
+
+\section{And Yet Another New Section}
+\lipsum[3-4]
+
+\section{And Yet Another New Section}
+\lipsum[3-4]
+
+
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{999}
+\input{bibliography.tex}
+\end{thebibliography}
+
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+
+\end{document}
